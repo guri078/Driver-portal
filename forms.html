@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Registration Form</title>
+    <style>
+        body {
+            background-image: url('truck img.jpg'); /* Image path */
+
+            background-size: cover;  /* Ensures full coverage */
+
+            background-position: center; /* Centers the image */
+
+            background-repeat: no-repeat; /* Prevents tiling */
+
+            height: 100vh; /* Full height of the viewport */
+
+            font-family: Arial, sans-serif;
+           
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Driver Registration Form</h2>
+
+        <p>Please fill in your details to register as a driver.</p>
+
+        <form action="submit_form.php" method="post">
+            
+            <!-- Personal Information -->
+            <label for="name">Full Name:</label>
+
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <label for="phone">Phone Number:</label>
+
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+            <!-- License Details -->
+            <label for="license">Driver's License Number:</label>
+
+            <input type="text" id="license" name="license" placeholder="Enter license number" required>
+
+            <label for="license_expiry">License Expiry Date:</label>
+
+            <input type="date" id="license_expiry" name="license_expiry" required>
+
+            <!-- Vehicle Information -->
+            <label for="vehicle">Vehicle Type:</label>
+
+            <select id="vehicle" name="vehicle">
+
+                <option value="Truck">Truck</option>
+
+                <option value="Car">Car</option>
+
+                <option value="Motorbike">Dry van</option>
+            </select>
+
+            <label for="plate">Vehicle Plate Number:</label>
+
+            <input type="text" id="plate" name="plate" placeholder="Enter plate number" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+
+</body>
+
+</html>
